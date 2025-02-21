@@ -1,5 +1,4 @@
 ﻿using SalaryCalculation;
-//TimeSpan time = TimeSpan.Parse("08:30");
 IEmployeeFactory employeeFactory = new EmployeeFactory();
 IEmployee employee = employeeFactory.CreateEmployee(EmployeeType.SimpleEmployee);
 employee.Name = "Mamad";
