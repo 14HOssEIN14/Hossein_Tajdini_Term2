@@ -27,8 +27,8 @@ public class CEO : IEmployee
 
     public double? CalculateSalary()
     {
-        return ((BaseSalary * Level * EmployeeRatio * TotalHoursInMonth) +
-                (BaseSalary * ExtraTimePerHours * Level * EmployeeRatio * 1.2));
+        return ((BaseSalary *( 1+Level/10) * EmployeeRatio * TotalHoursInMonth) +
+                (BaseSalary * ExtraTimePerHours * (1 + Level / 10) * EmployeeRatio * 1.2));
 
     }
 

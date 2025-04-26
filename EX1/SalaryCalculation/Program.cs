@@ -1,6 +1,6 @@
 ﻿using SalaryCalculation;
 IEmployeeFactory employeeFactory = new EmployeeFactory();
-IEmployee employee = employeeFactory.CreateEmployee(EmployeeType.SimpleEmployee);
+IEmployee employee = employeeFactory.CreateEmployee(EmployeeType.CEO);
 employee.Name = "Mamad";
 employee.LastName = "Gholi";
 employee.NationalID = "3813076301";
