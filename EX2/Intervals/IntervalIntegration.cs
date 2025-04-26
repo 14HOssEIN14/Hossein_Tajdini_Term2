@@ -20,10 +20,11 @@ namespace Intervals
                 if (i + 1 < sortedIntervals.Count)
                 {
 
-                    if (sortedIntervals[i].Members.Union(sortedIntervals[i + 1].Members).SequenceEqual(new Interval { Start = sortedIntervals[i].Start, End = sortedIntervals[i + 1].End }.Members))
+                    if (sortedIntervals[i].Members.Union(sortedIntervals[i + 1].Members).ToList().SequenceEqual(new Interval { Start = sortedIntervals[i].Start, End = sortedIntervals[i + 1].End }.Members))
                     {
                         sortedIntervals[i] = new Interval { Start = sortedIntervals[i].Start, End = sortedIntervals[i + 1].End };
                         sortedIntervals.RemoveAt(i + 1);
+                        i--;
                     }
 
                 }
